@@ -5,7 +5,7 @@
  *
  * @n: start of the input variables
  *
- * Return: the sum
+ * Return: n == 0, return 0
 */
 
 int sum_them_all(const unsigned int n, ...)
