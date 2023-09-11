@@ -48,33 +48,33 @@ return (dest);
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-dog_t *dogo;
+dog_t *doggo;
 
 if (name == NULL || age < 0 || owner == NULL)
 return (NULL);
 
-dogo = malloc(sizeof(dog_t));
-if (dogo == NULL)
+doggo = malloc(sizeof(dog_t));
+if (doggo == NULL)
 return (NULL);
 
-dogo->name = malloc(sizeof(char) * (_strlen(name) + 1));
-if (dogo->name == NULL)
+doggo->name = malloc(sizeof(char) * (_strlen(name) + 1));
+if (doggo->name == NULL)
 {
-free(dogo);
+free(doggo);
 return (NULL);
 }
 
-dogo->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
-if (dogo->owner == NULL)
+doggo->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+if (doggo->owner == NULL)
 {
-free(dogo->name);
-free(dogo);
+free(doggo->name);
+free(doggo);
 return (NULL);
 }
 
-dogo->name = _strcopy(dogo->name, name);
-dogo->age = age;
-dogo->owner = _strcopy(dogo->owner, owner);
+doggo->name = _strcopy(doggo->name, name);
+doggo->age = age;
+doggo->owner = _strcopy(doggo->owner, owner);
 
-return (dogo);
+return (doggo);
 }
