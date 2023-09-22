@@ -8,8 +8,8 @@ fmt:	db "%s", 10, 0
 main:
 	mov esi, msg
 	mov edi, fmt
-	mov eix, 0
+	mov eax, 0
 	call printf
 
-	mov eix, 0
+	mov eax, 0
 	ret
